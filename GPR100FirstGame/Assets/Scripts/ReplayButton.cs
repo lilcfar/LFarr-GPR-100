@@ -7,6 +7,7 @@ public class ReplayButton : MonoBehaviour
 {
     public void ReplayGame()
     {
+        CountDownTimer.timeLeft = 60;
         SceneManager.LoadScene("SampleScene");
     }
 }
