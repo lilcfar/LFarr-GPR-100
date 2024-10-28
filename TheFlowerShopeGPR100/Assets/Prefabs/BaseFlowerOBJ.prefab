@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 8828623358125245561}
   - component: {fileID: 4154289351447159209}
   - component: {fileID: 5291989798149840821}
-  - component: {fileID: 3502099054729352988}
   - component: {fileID: 3206660372522938434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BaseFlowerOBJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,21 +102,11 @@ MonoBehaviour:
   timeToGrowSprout: 10
   timeToGrowFull: 20
   coinProductionInterval: 20
+  timeToWilted: 60
   seedSprite: {fileID: 21300000, guid: 3d9465b7874f45e4287b188fcb92d03c, type: 3}
   sproutSprite: {fileID: 21300000, guid: b3b99d804d4207a4ea7fdfd45ab122ee, type: 3}
   fullGrownSprite: {fileID: 21300000, guid: 256ff8066ad27ff4d8e5019075b65717, type: 3}
---- !u!114 &3502099054729352988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3045544494618017087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e4eafbba70355d40af1f9f9242da9f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  wiltedSprite: {fileID: 21300000, guid: 443e2ebe350897f4fb0bf72771199f48, type: 3}
 --- !u!61 &3206660372522938434
 BoxCollider2D:
   m_ObjectHideFlags: 0

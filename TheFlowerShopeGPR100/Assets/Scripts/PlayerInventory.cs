@@ -5,58 +5,46 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour
 {
     public static PlayerInventory Instance;
+    private FlowerLifeCycle flowerLifeCycle;
 
-    public int coins = 0; // Stores collected coins
-    public Dictionary<string, int> flowerSeeds = new Dictionary<string, int>(); // To store seeds (flower type and quantity)
+    public int coins = 0;
+
+    void Start()
+    {
+        flowerLifeCycle = GetComponent<FlowerLifeCycle>();
+    }
 
     void Awake()
     {
-        // Ensures one instance of the inventory (Singleton)
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // So the inventory persists across scenes
+            DontDestroyOnLoad(gameObject);
         }
-        else
+        else if (Instance != this)
         {
             Destroy(gameObject);
         }
     }
 
-    // Add coins to the player's inventory
     public void AddCoins(int amount)
     {
         coins += amount;
         Debug.Log("Coins in inventory: " + coins);
     }
 
-    // Add seeds to the player's inventory
-    public void AddSeeds(string flowerType, int amount)
+    public bool PurchaseFlower(int cost)
     {
-        if (flowerSeeds.ContainsKey(flowerType))
+        if (coins >= cost)
         {
-            flowerSeeds[flowerType] += amount;
+            coins -= cost;
+            Debug.Log("Flower purchased! Remaining coins: " + coins);
+            return true;
         }
         else
         {
-            flowerSeeds[flowerType] = amount;
-        }
-        Debug.Log(flowerType + " seeds in inventory: " + flowerSeeds[flowerType]);
-    }
-
-    // Remove seeds from the player's inventory (when planting)
-    public bool UseSeed(string flowerType)
-    {
-        if (flowerSeeds.ContainsKey(flowerType) && flowerSeeds[flowerType] > 0)
-        {
-            flowerSeeds[flowerType]--;
-            Debug.Log(flowerType + " seeds remaining: " + flowerSeeds[flowerType]);
-            return true; // Successfully used a seed
-        }
-        else
-        {
-            Debug.Log("No seeds of type " + flowerType + " left.");
-            return false; // No seeds to use
+            Debug.Log("Not enough coins to purchase flower.");
+            return false;
         }
     }
 }

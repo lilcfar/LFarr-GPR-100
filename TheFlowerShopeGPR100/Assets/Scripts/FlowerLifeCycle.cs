@@ -4,31 +4,47 @@ using UnityEngine;
 
 public class FlowerLifeCycle : MonoBehaviour
 {
-    public enum FlowerState { Seed, Sprout, FullGrown }
+    public enum FlowerState { Seed, Sprout, FullGrown, Wilted }
     public FlowerState currentState;
 
-    public float timeToGrowSprout = 10f;  
-    public float timeToGrowFull = 20f;    
-    public float coinProductionInterval = 60f;  // Time to generate one coin once full grown (will change currency later) 
+    public float timeToGrowSprout = 10f;
+    public float timeToGrowFull = 20f;
+    public float coinProductionInterval = 60f;
+    public float timeToWilted = 120f;
 
     private float growthTimer = 0f;
     private bool isFullGrown = false;
-    private bool hasCoinsReady = false; // check if coins are ready
+    private bool isWilted = false;
+    private bool hasCoinsReady = false;
+    private float remainingWiltTime; // Tracks remaining wilt time
 
-    // need to add sprites for stage of the flower
     public Sprite seedSprite;
     public Sprite sproutSprite;
     public Sprite fullGrownSprite;
+    public Sprite wiltedSprite;
 
     private SpriteRenderer spriteRenderer;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentState = FlowerState.Seed;
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = seedSprite;  // initial state as Seed for flower sprite
+        remainingWiltTime = timeToWilted; // Initialize remaining time
         StartCoroutine(GrowFlower());
+    }
+
+    // detect player clicks
+    private void OnMouseDown()
+    {
+        if (isWilted)
+        {
+            ReviveWithWater();
+        }
+        else
+        {
+            CollectCoins(); // Collect coins if not wilted
+        }
     }
 
     // grows the flower and sets is full grown to true 
@@ -48,10 +64,10 @@ public class FlowerLifeCycle : MonoBehaviour
                 currentState = FlowerState.FullGrown;
                 spriteRenderer.sprite = fullGrownSprite;
                 isFullGrown = true;
-                // full grown is true so call to start producing currency 
+                // full grown is true so call to start producing currency and wilting cycle
                 StartCoroutine(ProduceCoins());
+                StartCoroutine(WiltFlower());
             }
-
             yield return null;
         }
     }
@@ -60,26 +76,62 @@ public class FlowerLifeCycle : MonoBehaviour
     {
         while (isFullGrown)
         {
+            // Wait for the coin production interval only if the flower is not wilted
+            while (isWilted)
+            {
+                yield return null; // Pauses the coroutine while the flower is wilted
+            }
+
             yield return new WaitForSeconds(coinProductionInterval);
-            hasCoinsReady = true; // Coins are ready to be harvested
-            Debug.Log("Coins ready to harvest!");
+
+            if (!isWilted) // Coins only ready if flower  not wilted
+            {
+                hasCoinsReady = true;
+                Debug.Log("Coins ready to harvest!");
+            }
+        }
+    }
+
+    IEnumerator WiltFlower()
+    {
+        while (isFullGrown && !isWilted)
+        {
+            yield return new WaitForSeconds(remainingWiltTime);
+            currentState = FlowerState.Wilted;
+            spriteRenderer.sprite = wiltedSprite;
+            isWilted = true;
+            Debug.Log("flower wilted and needs water");
         }
     }
 
     // Function called when  player clicks on the flower to collect coins
-    public int CollectCoins()
+    public void CollectCoins()
     {
         if (hasCoinsReady)
         {
             hasCoinsReady = false;
             Debug.Log("Coins collected!");
-            return 1; // Return the number of coins collected 
+            int coinsCollected = 1;
+            PlayerInventory.Instance.AddCoins(coinsCollected); // Use Instance to add coins
         }
-        return 0; // No coins to collect
     }
 
-    // Will add a  Visual indicator to show coins are ready
-    // will implement later once I'm ready to add currency / score system for player 
-    // for now just debug log to check if it works - Lily 
+    // Function to revive wilted flower
+    public void ReviveWithWater()
+    {
+        if (isWilted && WaterSource.Instance.UseWater())
+        {
+            isWilted = false;
+            isFullGrown = true; // Flower returns to full-grown state
+            currentState = FlowerState.FullGrown;
+            spriteRenderer.sprite = fullGrownSprite;
 
+            remainingWiltTime = timeToWilted; // Reset the wilt timer
+            StartCoroutine(ProduceCoins()); // Restart coin production
+            StartCoroutine(WiltFlower()); // Restart wilting cycle
+            Debug.Log("Flower revived with water!");
+        }
+    }
+
+    // Will add a  Visual indicator to show coins are ready later well figure it out l8tr
 }
