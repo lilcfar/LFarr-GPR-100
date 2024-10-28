@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/NextScene.unity
     guid: ffb9214a000c60e41a8aaee96e93f7df
   - enabled: 1
-    path: Assets/Scenes/FlowerScene.unity
+    path: Assets/Scenes/FlowerShopScene.unity
     guid: bc142f65cb2044147ab670a9aa19fcf1
   m_configObjects: {}
