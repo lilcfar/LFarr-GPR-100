@@ -1294,6 +1294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionsPanel: {fileID: 8365577804154559108, guid: 832eaaa408649af439f4c9a7076d6d3d, type: 3}
+  storePanel: {fileID: 0}
 --- !u!114 &1120397373
 MonoBehaviour:
   m_ObjectHideFlags: 0
