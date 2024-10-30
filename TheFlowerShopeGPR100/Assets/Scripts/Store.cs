@@ -7,7 +7,7 @@ public class Store : MonoBehaviour
     public GameObject[] flowerPrefabs; // Array of flower prefab variants
     public int[] flowerCosts;          // Costs for each type
 
-    private GameObject selectedFlower;  // The flower prefab selected for placement
+    public GameObject selectedFlower;  // The flower prefab selected for placement set to pub from priv.
 
     public void BuyFlower(int flowerIndex)
     {

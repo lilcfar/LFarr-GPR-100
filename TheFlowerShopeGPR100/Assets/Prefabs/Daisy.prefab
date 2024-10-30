@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3045544494618017087
+--- !u!1 &6897642032935144743
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8828623358125245561}
-  - component: {fileID: 4154289351447159209}
-  - component: {fileID: 5291989798149840821}
-  - component: {fileID: 3206660372522938434}
-  m_Layer: 6
-  m_Name: BaseFlowerOBJ
+  - component: {fileID: 6007449523514389382}
+  - component: {fileID: 5963062542083271811}
+  - component: {fileID: 8416018167254161650}
+  - component: {fileID: 4043931420779509255}
+  m_Layer: 0
+  m_Name: Daisy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8828623358125245561
+--- !u!4 &6007449523514389382
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3045544494618017087}
+  m_GameObject: {fileID: 6897642032935144743}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4742, y: -2.3196, z: 0}
-  m_LocalScale: {x: 0.2095, y: 0.2589, z: 1}
+  m_LocalPosition: {x: -1.8040551, y: -3.247219, z: 0}
+  m_LocalScale: {x: 0.22311752, y: 0.23676404, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4154289351447159209
+--- !u!212 &5963062542083271811
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3045544494618017087}
+  m_GameObject: {fileID: 6897642032935144743}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -80,19 +80,19 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.26, y: 6.26}
+  m_Size: {x: 8, y: 8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5291989798149840821
+--- !u!114 &8416018167254161650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3045544494618017087}
+  m_GameObject: {fileID: 6897642032935144743}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74f0be8df35cdd24fbfc23f342484130, type: 3}
@@ -100,20 +100,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   timeToGrowSprout: 10
-  timeToGrowFull: 20
-  coinProductionInterval: 20
-  timeToWilted: 60
+  timeToGrowFull: 5
+  coinProductionInterval: 5
+  timeToWilted: 9
   seedSprite: {fileID: 21300000, guid: 3d9465b7874f45e4287b188fcb92d03c, type: 3}
-  sproutSprite: {fileID: 21300000, guid: 7339953bc02a152448e60e6337475f89, type: 3}
-  fullGrownSprite: {fileID: 21300000, guid: 82d8ed5321d509b4b9ba0975117a9663, type: 3}
-  wiltedSprite: {fileID: 21300000, guid: 87546b44322b3974280ee75e3e6f29bc, type: 3}
---- !u!61 &3206660372522938434
+  sproutSprite: {fileID: 21300000, guid: 68814af1cbf30104ebe5fe4e7babb01d, type: 3}
+  fullGrownSprite: {fileID: 21300000, guid: 88a116c9f6015bb46a2c8a551e32f0b1, type: 3}
+  wiltedSprite: {fileID: 21300000, guid: e2b5153d1f8f54c4b9b1ca375895bbfe, type: 3}
+--- !u!61 &4043931420779509255
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3045544494618017087}
+  m_GameObject: {fileID: 6897642032935144743}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -139,16 +139,16 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.14153206, y: -0.5422485}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.26, y: 6.26}
-    newSize: {x: 6.26, y: 6.26}
+    oldSize: {x: 8, y: 8}
+    newSize: {x: 8, y: 8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15, y: 15}
+  m_Size: {x: 6.915531, y: 7.250378}
   m_EdgeRadius: 0
