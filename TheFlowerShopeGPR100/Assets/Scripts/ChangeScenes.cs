@@ -10,7 +10,7 @@ using System.Security.Cryptography;
 public class ChangeScenes : MonoBehaviour
 {
     public GameObject optionsPanel;
-    public GameObject storePanel;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -56,20 +56,5 @@ public class ChangeScenes : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("Start Screen");
-    }
-
-    public void OpenPanel()
-    {
-        if(storePanel != null)
-        {
-            Animator animator = storePanel.GetComponent<Animator>();
-            if(animator != null)
-            {
-                bool isOpen = animator.GetBool("open");
-
-                animator.SetBool("open", !isOpen);
-            }
-
-        }
     }
 }

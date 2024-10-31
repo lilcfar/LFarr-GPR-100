@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Store : MonoBehaviour
 {
+    public GameObject storePanel;
+
     public GameObject[] flowerPrefabs; // Array of flower prefab variants
     public int[] flowerCosts;          // Costs for each type
 
@@ -67,5 +70,29 @@ public class Store : MonoBehaviour
         }
 
         Debug.Log("Invalid placement. Please place on ground.");
+    }
+
+    public void OpenStore()
+    {
+        if (storePanel.activeInHierarchy == false)
+        {
+            storePanel.SetActive(true);
+        }
+        else if (storePanel.activeInHierarchy == true)
+        {
+            storePanel.SetActive(false);
+        }
+
+        /*if (storePanel != null)
+        {
+            Animator animator = storePanel.GetComponent<Animator>();
+            if (animator != null)
+            {
+                bool isOpen = animator.GetBool("open");
+
+                animator.SetBool("open", !isOpen);
+            }
+
+        }*/
     }
 }

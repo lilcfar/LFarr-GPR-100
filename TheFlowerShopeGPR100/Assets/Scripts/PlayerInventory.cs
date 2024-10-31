@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -8,10 +10,16 @@ public class PlayerInventory : MonoBehaviour
     private FlowerLifeCycle flowerLifeCycle;
 
     public int coins = 0;
+    public Text coinText;
 
     void Start()
     {
         flowerLifeCycle = GetComponent<FlowerLifeCycle>();
+    }
+
+    private void Update()
+    {
+        coinText.text = "coins: " + coins.ToString();
     }
 
     void Awake()
