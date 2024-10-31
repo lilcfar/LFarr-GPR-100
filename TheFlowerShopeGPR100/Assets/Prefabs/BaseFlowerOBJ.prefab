@@ -103,10 +103,12 @@ MonoBehaviour:
   timeToGrowFull: 20
   coinProductionInterval: 20
   timeToWilted: 60
-  seedSprite: {fileID: 21300000, guid: 3d9465b7874f45e4287b188fcb92d03c, type: 3}
-  sproutSprite: {fileID: 21300000, guid: 7339953bc02a152448e60e6337475f89, type: 3}
-  fullGrownSprite: {fileID: 21300000, guid: 82d8ed5321d509b4b9ba0975117a9663, type: 3}
-  wiltedSprite: {fileID: 21300000, guid: 87546b44322b3974280ee75e3e6f29bc, type: 3}
+  seedSprite: {fileID: 21300000, guid: 68814af1cbf30104ebe5fe4e7babb01d, type: 3}
+  sproutSprite: {fileID: 21300000, guid: 68814af1cbf30104ebe5fe4e7babb01d, type: 3}
+  fullGrownSprite: {fileID: 21300000, guid: 88a116c9f6015bb46a2c8a551e32f0b1, type: 3}
+  wiltedSprite: {fileID: 21300000, guid: e2b5153d1f8f54c4b9b1ca375895bbfe, type: 3}
+  needWaterPrefab: {fileID: 4176801678274184265, guid: 9d4e004b5a860ed44af54aa384f22696, type: 3}
+  needWaterOffset: {x: 0.65, y: 0.85, z: 0}
 --- !u!61 &3206660372522938434
 BoxCollider2D:
   m_ObjectHideFlags: 0

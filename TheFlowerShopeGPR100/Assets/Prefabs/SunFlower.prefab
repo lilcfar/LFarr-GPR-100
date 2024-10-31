@@ -107,6 +107,8 @@ MonoBehaviour:
   sproutSprite: {fileID: 21300000, guid: 2312fdb00c6833a4a8d8b6ea4a217993, type: 3}
   fullGrownSprite: {fileID: 21300000, guid: af10175f19805d4408a0b4f95747ce3d, type: 3}
   wiltedSprite: {fileID: 21300000, guid: 4d804316d09093d48b5fd40b67312dff, type: 3}
+  needWaterPrefab: {fileID: 4176801678274184265, guid: 9d4e004b5a860ed44af54aa384f22696, type: 3}
+  needWaterOffset: {x: 0.65, y: 0.85, z: 0}
 --- !u!61 &7654955636282010921
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -23,6 +23,10 @@ public class FlowerLifeCycle : MonoBehaviour
     public Sprite fullGrownSprite;
     public Sprite wiltedSprite;
 
+    public GameObject needWaterPrefab;  // Assign the "NeedWater" prefab in the Inspector
+    public Vector3 needWaterOffset = new Vector3(0.65f, .85f, 0f);  // Set X to 0.85, Y to 1.2
+    private GameObject needWaterInstance;  // Keep track of the instantiated prefab
+
     private SpriteRenderer spriteRenderer;
 
     void Start()
@@ -101,6 +105,14 @@ public class FlowerLifeCycle : MonoBehaviour
             spriteRenderer.sprite = wiltedSprite;
             isWilted = true;
             Debug.Log("flower wilted and needs water");
+
+            if (needWaterInstance == null)
+            {
+                Vector3 positionAboveFlower = transform.position + needWaterOffset;
+                needWaterInstance = Instantiate(needWaterPrefab, positionAboveFlower, Quaternion.identity);
+                //Vector3 positionAboveFlower = transform.position + new Vector3(.85f, 1.2f, 0); 
+                //needWaterInstance = Instantiate(needWaterPrefab, positionAboveFlower, Quaternion.identity);
+            }
         }
     }
 
@@ -125,6 +137,12 @@ public class FlowerLifeCycle : MonoBehaviour
             isFullGrown = true; // Flower returns to full-grown state
             currentState = FlowerState.FullGrown;
             spriteRenderer.sprite = fullGrownSprite;
+
+            if (needWaterInstance != null)
+            {
+                Destroy(needWaterInstance);
+                needWaterInstance = null;
+            }
 
             remainingWiltTime = timeToWilted; // Reset the wilt timer
             StartCoroutine(ProduceCoins()); // Restart coin production
