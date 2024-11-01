@@ -121,9 +121,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4454258879494203099, guid: 76d4ee9738ba9e649ab9baac63e61db2, type: 3}
         m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
-        m_MethodName: CloseMenu
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4454258879494203099, guid: 76d4ee9738ba9e649ab9baac63e61db2, type: 3}
         m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
         m_MethodName: CloseMenu
         m_Mode: 1
@@ -730,7 +730,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4454258879494203099, guid: 76d4ee9738ba9e649ab9baac63e61db2, type: 3}
         m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -757,7 +757,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2795030739101387595
 RectTransform:
   m_ObjectHideFlags: 0

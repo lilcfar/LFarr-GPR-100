@@ -21,7 +21,7 @@ public class ChangeScenes : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("FlowerScene");
+        SceneManager.LoadScene("FlowerShopScene");
     }
 
     public void QuitGame()
