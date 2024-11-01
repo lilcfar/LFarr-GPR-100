@@ -109,6 +109,8 @@ MonoBehaviour:
   wiltedSprite: {fileID: 21300000, guid: 944855a9fc41aad498d4aac8b8141696, type: 3}
   needWaterPrefab: {fileID: 4176801678274184265, guid: 9d4e004b5a860ed44af54aa384f22696, type: 3}
   needWaterOffset: {x: 0.65, y: 0.85, z: 0}
+  coinReadyPrefab: {fileID: 4873783851832329500, guid: 3eb6e5eb153afcb4aac98f8338f00ccb, type: 3}
+  coinReadyOffset: {x: 0.65, y: 0.85, z: 0}
 --- !u!61 &6511339962568247738
 BoxCollider2D:
   m_ObjectHideFlags: 0

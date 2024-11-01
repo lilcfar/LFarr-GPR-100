@@ -27,6 +27,12 @@ public class FlowerLifeCycle : MonoBehaviour
     public Vector3 needWaterOffset = new Vector3(0.65f, .85f, 0f);  // Set X to 0.85, Y to 1.2
     private GameObject needWaterInstance;  // Keep track of the instantiated prefab
 
+    // for feedback that coins ready 
+    public GameObject coinReadyPrefab;
+    public Vector3 coinReadyOffset = new Vector3(0.65f, .85f, 0f);
+    private GameObject coinReadyInstance;
+
+
     private SpriteRenderer spriteRenderer;
 
     void Start()
@@ -92,6 +98,13 @@ public class FlowerLifeCycle : MonoBehaviour
             {
                 hasCoinsReady = true;
                 Debug.Log("Coins ready to harvest!");
+
+                // Instantiate the coinReadyPrefab above the flower if it hasn't been instantiated yet
+                if (coinReadyInstance == null)
+                {
+                    Vector3 positionAboveFlower = transform.position + coinReadyOffset;
+                    coinReadyInstance = Instantiate(coinReadyPrefab, positionAboveFlower, Quaternion.identity);
+                }
             }
         }
     }
@@ -125,6 +138,13 @@ public class FlowerLifeCycle : MonoBehaviour
             Debug.Log("Coins collected!");
             int coinsCollected = 1;
             PlayerInventory.Instance.AddCoins(coinsCollected); // Use Instance to add coins
+
+            // Destroy the coinReadyInstance after collecting coins
+            if (coinReadyInstance != null)
+            {
+                Destroy(coinReadyInstance);
+                coinReadyInstance = null;
+            }
         }
     }
 
