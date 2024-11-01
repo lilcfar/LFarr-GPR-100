@@ -37,11 +37,18 @@ public class FlowerLifeCycle : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(this.gameObject); // Make flower persistent across scenes
         currentState = FlowerState.Seed;
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = seedSprite;  // initial state as Seed for flower sprite
         remainingWiltTime = timeToWilted; // Initialize remaining time
         StartCoroutine(GrowFlower());
+
+        //currentState = FlowerState.Seed;
+        //spriteRenderer = GetComponent<SpriteRenderer>();
+        //spriteRenderer.sprite = seedSprite;  // initial state as Seed for flower sprite
+        //remainingWiltTime = timeToWilted; // Initialize remaining time
+        //StartCoroutine(GrowFlower());
     }
 
     // detect player clicks
