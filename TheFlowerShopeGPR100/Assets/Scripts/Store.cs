@@ -20,9 +20,20 @@ public class Store : MonoBehaviour
             if (PlayerInventory.Instance.PurchaseFlower(cost))
             {
                 selectedFlower = Instantiate(flowerPrefabs[flowerIndex]);
+                DontDestroyOnLoad(selectedFlower); // Make selected flower persistent
                 Debug.Log("Flower selected for placement.");
             }
         }
+
+        //if (flowerIndex >= 0 && flowerIndex < flowerPrefabs.Length)
+        //{
+        //    int cost = flowerCosts[flowerIndex];
+        //    if (PlayerInventory.Instance.PurchaseFlower(cost))
+        //    {
+        //        selectedFlower = Instantiate(flowerPrefabs[flowerIndex]);
+        //        Debug.Log("Flower selected for placement.");
+        //    }
+        //}
     }
 
     void Update()
