@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7727204082808237177
+--- !u!1 &7524442425483328085
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5556918882536398842}
-  - component: {fileID: 2906112426509282509}
-  - component: {fileID: 8606217861535989076}
-  - component: {fileID: 3174974807950532300}
+  - component: {fileID: 1678044269332069242}
+  - component: {fileID: 5155216649672349132}
+  - component: {fileID: 7788566588570897368}
+  - component: {fileID: 7654955636282010921}
   m_Layer: 0
-  m_Name: Cactus
-  m_TagString: Untagged
+  m_Name: SunFlower
+  m_TagString: Flower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5556918882536398842
+--- !u!4 &1678044269332069242
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7727204082808237177}
+  m_GameObject: {fileID: 7524442425483328085}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8040551, y: -3.247219, z: 0}
+  m_LocalPosition: {x: 0.17, y: 0.38, z: 0}
   m_LocalScale: {x: 0.22311752, y: 0.23676404, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2906112426509282509
+--- !u!212 &5155216649672349132
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7727204082808237177}
+  m_GameObject: {fileID: 7524442425483328085}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -86,13 +86,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8606217861535989076
+--- !u!114 &7788566588570897368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7727204082808237177}
+  m_GameObject: {fileID: 7524442425483328085}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74f0be8df35cdd24fbfc23f342484130, type: 3}
@@ -103,21 +103,21 @@ MonoBehaviour:
   timeToGrowFull: 5
   coinProductionInterval: 5
   timeToWilted: 9
-  seedSprite: {fileID: 21300000, guid: 3d9465b7874f45e4287b188fcb92d03c, type: 3}
-  sproutSprite: {fileID: 21300000, guid: 7339953bc02a152448e60e6337475f89, type: 3}
-  fullGrownSprite: {fileID: 21300000, guid: 82d8ed5321d509b4b9ba0975117a9663, type: 3}
-  wiltedSprite: {fileID: 21300000, guid: 87546b44322b3974280ee75e3e6f29bc, type: 3}
+  seedSprite: {fileID: 21300000, guid: 2312fdb00c6833a4a8d8b6ea4a217993, type: 3}
+  sproutSprite: {fileID: 21300000, guid: 2312fdb00c6833a4a8d8b6ea4a217993, type: 3}
+  fullGrownSprite: {fileID: 21300000, guid: af10175f19805d4408a0b4f95747ce3d, type: 3}
+  wiltedSprite: {fileID: 21300000, guid: 0cbafa8582e6e68439d5d6e2a96a798f, type: 3}
   needWaterPrefab: {fileID: 4176801678274184265, guid: 9d4e004b5a860ed44af54aa384f22696, type: 3}
   needWaterOffset: {x: 0.65, y: 0.85, z: 0}
   coinReadyPrefab: {fileID: 4873783851832329500, guid: 3eb6e5eb153afcb4aac98f8338f00ccb, type: 3}
   coinReadyOffset: {x: 0.65, y: 0.85, z: 0}
---- !u!61 &3174974807950532300
+--- !u!61 &7654955636282010921
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7727204082808237177}
+  m_GameObject: {fileID: 7524442425483328085}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
