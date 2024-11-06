@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72e540a1f0aa7a458e5b710ff5f8abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storePanel: {fileID: 7119041672839714725, guid: 6ae6487f2801dad48a18c8d31c91abb6, type: 3}
+  storePanel: {fileID: 2148929192277453897, guid: e4c1382d820660a4faec576034980788, type: 3}
   flowerPrefabs:
   - {fileID: 7727204082808237177, guid: a3bfc63257afe204fa0744d5857450cd, type: 3}
   - {fileID: 6897642032935144743, guid: b902b4acda6367948aa76acf92b66325, type: 3}
@@ -69,7 +69,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: 2
-  coinText: {fileID: 165178043762591065, guid: cbaed2d89fc7a314c98b71c560375817, type: 3}
 --- !u!114 &6270350625868438749
 MonoBehaviour:
   m_ObjectHideFlags: 0
