@@ -63,7 +63,7 @@ public class PlayerInventory : MonoBehaviour
         Text coinText = GameObject.Find("CoinText")?.GetComponent<Text>();
         if (coinText != null)
         {
-            coinText.text = "Coins: " + coins.ToString();
+            coinText.text = coins.ToString();
         }
     }
 }
