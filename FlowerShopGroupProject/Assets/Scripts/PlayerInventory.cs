@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -60,7 +61,8 @@ public class PlayerInventory : MonoBehaviour
     }
     private void UpdateCoinText()
     {
-        Text coinText = GameObject.Find("CoinText")?.GetComponent<Text>();
+        TMP_Text coinText = GameObject.Find("CoinTxt")?.GetComponent<TMP_Text>();
+
         if (coinText != null)
         {
             coinText.text = coins.ToString();

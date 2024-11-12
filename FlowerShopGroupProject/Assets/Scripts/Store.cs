@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 public class Store : MonoBehaviour
 {
@@ -28,7 +29,9 @@ public class Store : MonoBehaviour
             if (PlayerInventory.Instance.PurchaseFlower(cost))
             {
                 selectedFlower = Instantiate(flowerPrefabs[flowerIndex]);
+                storePanel.SetActive(false);
                 Debug.Log("Flower selected for placement.");
+            
             }
         }
     }
@@ -80,15 +83,5 @@ public class Store : MonoBehaviour
         Debug.Log("Invalid placement. Please place on ground.");
     }
 
-    public void OpenStore()
-    {
-        if (storePanel.activeInHierarchy == false)
-        {
-            storePanel.SetActive(true);
-        }
-        else if (storePanel.activeInHierarchy == true)
-        {
-            storePanel.SetActive(false);
-        }
-    }
+  
 }
