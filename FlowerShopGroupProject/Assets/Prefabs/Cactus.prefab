@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  timeToHarvest: 60
   timeToGrowSprout: 10
   timeToGrowFull: 5
   coinProductionInterval: 5
@@ -111,6 +112,8 @@ MonoBehaviour:
   needWaterOffset: {x: 0.65, y: 0.85, z: 0}
   coinReadyPrefab: {fileID: 4873783851832329500, guid: 3eb6e5eb153afcb4aac98f8338f00ccb, type: 3}
   coinReadyOffset: {x: 0.65, y: 0.85, z: 0}
+  harvestablePrefab: {fileID: 9093498178051550741, guid: 60884d6def21b1248844e7832dee1906, type: 3}
+  harvestableOffset: {x: 0.65, y: 0.85, z: 0}
 --- !u!61 &3174974807950532300
 BoxCollider2D:
   m_ObjectHideFlags: 0
