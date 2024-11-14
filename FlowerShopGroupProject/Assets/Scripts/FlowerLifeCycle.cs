@@ -208,32 +208,56 @@ public class FlowerLifeCycle : MonoBehaviour
         }
     }
 
-    private void HarvestFlower()
+    public void HarvestFlower() // changed to public from private so i could call in update of shovelsource
     {
-        if (isReadyToHarvest)
+
+        if (isReadyToHarvest && ShovelSource.Instance.HasShovel())
         {
-            // Removea "Clone" part of the name to match the inventory keys
             string flowerType = this.gameObject.name.Replace("(Clone)", "").Trim();
-            // Adds flower to inventory
             playerInventory.AddFlowerToInventory(flowerType);
-            // destroy flower feedback after harvesting 
+
+            // Destroy feedback instances and the flower GameObject
             Destroy(coinReadyInstance);
             Destroy(needWaterInstance);
-            if (harvestableInstance != null)
-            {
-                Destroy(harvestableInstance);
-                harvestableInstance = null;
-            }
+            Destroy(harvestableInstance);
             Destroy(this.gameObject);
         }
+
+        //if (isReadyToHarvest)
+        //{
+        //    // Removea "Clone" part of the name to match the inventory keys
+        //    string flowerType = this.gameObject.name.Replace("(Clone)", "").Trim();
+        //    // Adds flower to inventory
+        //    playerInventory.AddFlowerToInventory(flowerType);
+        //    // destroy flower feedback after harvesting 
+        //    Destroy(coinReadyInstance);
+        //    Destroy(needWaterInstance);
+        //    if (harvestableInstance != null)
+        //    {
+        //        Destroy(harvestableInstance);
+        //        harvestableInstance = null;
+        //    }
+        //    Destroy(this.gameObject);
+        //}
     }
 }
 
+
+
+
+// before adjusting harvest logic just incase
 //public class FlowerLifeCycle : MonoBehaviour
 //{
 //    public enum FlowerState { Seed, Sprout, FullGrown, Wilted }
 //    public FlowerState currentState;
 
+//    // Harvest stuff
+//    public float timeToHarvest = 60f; // Time until the flower is ready to be harvested
+//    private bool isReadyToHarvest = false;
+
+//    private PlayerInventory playerInventory;
+
+//    // Growth cycle (grow wilt produce coins)
 //    public float timeToGrowSprout = 10f;
 //    public float timeToGrowFull = 20f;
 //    public float coinProductionInterval = 60f;
@@ -245,34 +269,59 @@ public class FlowerLifeCycle : MonoBehaviour
 //    private bool hasCoinsReady = false;
 //    private float remainingWiltTime; // Tracks remaining wilt time
 
+//    // flower state sprites
 //    public Sprite seedSprite;
 //    public Sprite sproutSprite;
 //    public Sprite fullGrownSprite;
 //    public Sprite wiltedSprite;
 
-//    public GameObject needWaterPrefab; 
-//    public Vector3 needWaterOffset = new Vector3(0.65f, .85f, 0f);  
-//    private GameObject needWaterInstance;  // Keep track of the instantiated prefab
+//    // need water feed back
+//    public GameObject needWaterPrefab;
+//    public Vector3 needWaterOffset = new Vector3(0.65f, .85f, 0f);
+//    private GameObject needWaterInstance;
 
-//    // for feedback that coins ready 
+//    // coin ready feedback 
 //    public GameObject coinReadyPrefab;
 //    public Vector3 coinReadyOffset = new Vector3(0.65f, .85f, 0f);
 //    private GameObject coinReadyInstance;
 
+//    // Harvestable feedback
+//    public GameObject harvestablePrefab;
+//    public Vector3 harvestableOffset = new Vector3(0.65f, .85f, 0f);
+//    private GameObject harvestableInstance;
 
 //    private SpriteRenderer spriteRenderer;
 
 //    void Start()
 //    {
-//        DontDestroyOnLoad(this.gameObject); // Make flower persistent across scenes
 //        currentState = FlowerState.Seed;
+//        playerInventory = FindObjectOfType<PlayerInventory>();
 //        spriteRenderer = GetComponent<SpriteRenderer>();
 //        spriteRenderer.sprite = seedSprite;  // initial state as Seed for flower sprite
 //        remainingWiltTime = timeToWilted; // Initialize remaining time
 //        StartCoroutine(GrowFlower());
 //    }
 
-//    // detect player clicks
+//    void Update()
+//    {
+//        if (isReadyToHarvest)
+//        {
+//            if (harvestableInstance == null)
+//            {
+//                Vector3 positionAboveFlower = transform.position + harvestableOffset;
+//                harvestableInstance = Instantiate(harvestablePrefab, positionAboveFlower, Quaternion.identity);
+//            }
+//        }
+//        if (isReadyToHarvest && Input.GetMouseButtonDown(0))
+//        {
+//            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+//            if (hit.collider != null && hit.collider.gameObject == this.gameObject)
+//            {
+//                HarvestFlower();
+//            }
+//        }
+//    }
+
 //    private void OnMouseDown()
 //    {
 //        if (isWilted)
@@ -285,7 +334,8 @@ public class FlowerLifeCycle : MonoBehaviour
 //        }
 //    }
 
-//    // grows the flower and sets is full grown to true 
+//    // grows the flower and sets is full grown to true and waits / sets harvestable true
+//    // maybe just add some if spade from tool bar selected then you can harvest so its optional?
 //    IEnumerator GrowFlower()
 //    {
 //        while (!isFullGrown)
@@ -308,6 +358,9 @@ public class FlowerLifeCycle : MonoBehaviour
 //            }
 //            yield return null;
 //        }
+//        // once full grown, set flower to be harvestable after a delay
+//        yield return new WaitForSeconds(timeToHarvest);
+//        isReadyToHarvest = true;
 //    }
 
 //    IEnumerator ProduceCoins()
@@ -351,6 +404,7 @@ public class FlowerLifeCycle : MonoBehaviour
 //            {
 //                Vector3 positionAboveFlower = transform.position + needWaterOffset;
 //                needWaterInstance = Instantiate(needWaterPrefab, positionAboveFlower, Quaternion.identity);
+//                // hasCoinsReady = false; /// this is where must do thing set active false? 
 //            }
 //        }
 //    }
@@ -388,12 +442,33 @@ public class FlowerLifeCycle : MonoBehaviour
 //            {
 //                Destroy(needWaterInstance);
 //                needWaterInstance = null;
+//                // add sm logic here to handle redisplaying coins (or maybe setactive true?)
 //            }
 
 //            remainingWiltTime = timeToWilted; // Reset the wilt timer
 //            StartCoroutine(ProduceCoins()); // Restart coin production
 //            StartCoroutine(WiltFlower()); // Restart wilting cycle
 //            Debug.Log("Flower revived with water!");
+//        }
+//    }
+
+//    private void HarvestFlower()
+//    {
+//        if (isReadyToHarvest)
+//        {
+//            // Removea "Clone" part of the name to match the inventory keys
+//            string flowerType = this.gameObject.name.Replace("(Clone)", "").Trim();
+//            // Adds flower to inventory
+//            playerInventory.AddFlowerToInventory(flowerType);
+//            // destroy flower feedback after harvesting 
+//            Destroy(coinReadyInstance);
+//            Destroy(needWaterInstance);
+//            if (harvestableInstance != null)
+//            {
+//                Destroy(harvestableInstance);
+//                harvestableInstance = null;
+//            }
+//            Destroy(this.gameObject);
 //        }
 //    }
 //}

@@ -1160,6 +1160,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 957704769272597202, guid: f6923c88a0cdbe24ea8701c594e7d423, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 957704769272597202, guid: f6923c88a0cdbe24ea8701c594e7d423, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000027418
+      objectReference: {fileID: 0}
+    - target: {fileID: 957704769272597202, guid: f6923c88a0cdbe24ea8701c594e7d423, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1708355066862832520, guid: f6923c88a0cdbe24ea8701c594e7d423, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
@@ -1192,6 +1204,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1556211287}
+    - target: {fileID: 4119789182079457247, guid: f6923c88a0cdbe24ea8701c594e7d423, type: 3}
+      propertyPath: m_Name
+      value: HarvestingShovel
+      objectReference: {fileID: 0}
     - target: {fileID: 4589630058235325489, guid: f6923c88a0cdbe24ea8701c594e7d423, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1280,6 +1296,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6979095085643664273, guid: f6923c88a0cdbe24ea8701c594e7d423, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1551457917}
+    - target: {fileID: 6979095085643664273, guid: f6923c88a0cdbe24ea8701c594e7d423, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CollectShovel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979095085643664273, guid: f6923c88a0cdbe24ea8701c594e7d423, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ShovelSource, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979095085643664273, guid: f6923c88a0cdbe24ea8701c594e7d423, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894875396879271117, guid: f6923c88a0cdbe24ea8701c594e7d423, type: 3}
+      propertyPath: m_Name
+      value: ShovelImage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8673061023858607247, guid: f6923c88a0cdbe24ea8701c594e7d423, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 637403d5247c55c499cdfedba7174d19, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1421,6 +1461,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1551457917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4306420627895417312, guid: 76d4ee9738ba9e649ab9baac63e61db2, type: 3}
+  m_PrefabInstance: {fileID: 6626678679415241222}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44425d7a8155dbe42ba301dac610ee2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1556211287 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4600232671637309367, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6270350625868438749}
   - component: {fileID: 4261519806795631819}
   - component: {fileID: 1820584110381197196}
+  - component: {fileID: 4306420627895417312}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -106,3 +107,16 @@ MonoBehaviour:
   venusflytrap1: {fileID: 21300000, guid: e084f4fca90daf94cb078f38602dbfae, type: 3}
   feedbackText: {fileID: 0}
   coins: 10
+--- !u!114 &4306420627895417312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286327475148664904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44425d7a8155dbe42ba301dac610ee2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shovelSpritePrefab: {fileID: 9093498178051550741, guid: 60884d6def21b1248844e7832dee1906, type: 3}
