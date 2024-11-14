@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 537709303192857121}
   - component: {fileID: 6646214015794203499}
-  - component: {fileID: 1183537244625928050}
   - component: {fileID: 6270350625868438749}
+  - component: {fileID: 4261519806795631819}
+  - component: {fileID: 1820584110381197196}
+  - component: {fileID: 4306420627895417312}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -56,19 +58,6 @@ MonoBehaviour:
   - {fileID: 1798913894516351785, guid: 83e24e8105a2e03489df2357ceff392c, type: 3}
   flowerCosts: 020000000300000004000000070000000300000009000000
   selectedFlower: {fileID: 0}
---- !u!114 &1183537244625928050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7286327475148664904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89e73316d9778a3499a4e47d2238efc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coins: 2
 --- !u!114 &6270350625868438749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,3 +70,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1845fe865563e0148bf8654242384faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4261519806795631819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286327475148664904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ef0e284c6e4ef4fa861fa3e73b92f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterSpritePrefab: {fileID: 4550195868760972177, guid: d6293ee4939cdb5429448ae27faf397a, type: 3}
+--- !u!114 &1820584110381197196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286327475148664904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e73316d9778a3499a4e47d2238efc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouquetSlotPrefab: {fileID: 4228101746657713868, guid: 38d9e359bd50f0a49b6b8c0811c724fd, type: 3}
+  bouquetSlotTransform: {fileID: 6639197936204371372, guid: 5bc7889074d74e04f90a58d1de1398a8, type: 3}
+  flowerSlotPrefab: {fileID: 6026404700980334865, guid: fbee5ab1fdf3b5444aa88cfbb55f74be, type: 3}
+  flowerGridTransform: {fileID: 7950088858710390841, guid: 4c40bf30e2f0e70499e3401dec04eb00, type: 3}
+  cactus1: {fileID: 21300000, guid: 82d8ed5321d509b4b9ba0975117a9663, type: 3}
+  daisy1: {fileID: 21300000, guid: 88a116c9f6015bb46a2c8a551e32f0b1, type: 3}
+  monstera1: {fileID: 21300000, guid: 18e70afd6a45daa4cbefe1c6e47d8d6f, type: 3}
+  orchid1: {fileID: 21300000, guid: fb09c2d4adf5ae2488083a5062bfbced, type: 3}
+  sunflower1: {fileID: 21300000, guid: af10175f19805d4408a0b4f95747ce3d, type: 3}
+  venusflytrap1: {fileID: 21300000, guid: e084f4fca90daf94cb078f38602dbfae, type: 3}
+  feedbackText: {fileID: 0}
+  coins: 10
+--- !u!114 &4306420627895417312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286327475148664904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44425d7a8155dbe42ba301dac610ee2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shovelSpritePrefab: {fileID: 9093498178051550741, guid: 60884d6def21b1248844e7832dee1906, type: 3}
