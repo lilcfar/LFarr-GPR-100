@@ -40,6 +40,8 @@ public class FlowerLifeCycle : MonoBehaviour
     public GameObject coinReadyPrefab;
     public Vector3 coinReadyOffset = new Vector3(0.65f, .85f, 0f);
     private GameObject coinReadyInstance;
+    public int coinsCollected; // coins collected from each flower
+
 
     // Harvestable feedback
     public GameObject harvestablePrefab;
@@ -176,7 +178,6 @@ public class FlowerLifeCycle : MonoBehaviour
         {
             hasCoinsReady = false;
             Debug.Log("Coins collected!");
-            int coinsCollected = 1;
             PlayerInventory.Instance.AddCoins(coinsCollected); // Use Instance to add coins
 
             // Destroy the coinReadyInstance after collecting coins

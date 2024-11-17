@@ -102,8 +102,8 @@ MonoBehaviour:
   timeToHarvest: 60
   timeToGrowSprout: 10
   timeToGrowFull: 5
-  coinProductionInterval: 5
-  timeToWilted: 9
+  coinProductionInterval: 10
+  timeToWilted: 5
   seedSprite: {fileID: 21300000, guid: 2312fdb00c6833a4a8d8b6ea4a217993, type: 3}
   sproutSprite: {fileID: 21300000, guid: 2312fdb00c6833a4a8d8b6ea4a217993, type: 3}
   fullGrownSprite: {fileID: 21300000, guid: af10175f19805d4408a0b4f95747ce3d, type: 3}
@@ -112,6 +112,7 @@ MonoBehaviour:
   needWaterOffset: {x: 0.65, y: 0.85, z: 0}
   coinReadyPrefab: {fileID: 4872586685793344825, guid: efc640069b612bd458d44f6c93d31545, type: 3}
   coinReadyOffset: {x: 0.65, y: 0.85, z: 0}
+  coinsCollected: 3
   harvestablePrefab: {fileID: 2520806333961232420, guid: 212e0b2bf55953649b890f68bc888b30, type: 3}
   harvestableOffset: {x: 0.65, y: 0.85, z: 0}
 --- !u!61 &7654955636282010921
