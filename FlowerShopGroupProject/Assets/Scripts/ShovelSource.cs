@@ -11,6 +11,9 @@ public class ShovelSource : MonoBehaviour
     public GameObject shovelSpritePrefab;
     private GameObject shovelSpriteInstance;
 
+    // to check if another tool is in use
+    public static bool isOtherToolInUse = false;
+
     private void Awake()
     {
         if (Instance == null)
@@ -33,9 +36,26 @@ public class ShovelSource : MonoBehaviour
 
     public void CollectShovel()
     {
-        hasShovel = true;
-        shovelSpriteInstance.SetActive(true); 
-        Debug.Log("Shovel collected!");
+        if (WaterSource.isOtherToolInUse) // Check if water is being used
+        {
+            Debug.Log("Cannot collect shovel while water is in use!");
+            return;
+        }
+
+        if (hasShovel)
+        {
+            hasShovel = false;
+            isOtherToolInUse = false; // Allow other tools
+            shovelSpriteInstance.SetActive(false);
+            Debug.Log("Shovel returned!");
+        }
+        else
+        {
+            hasShovel = true;
+            isOtherToolInUse = true; // Block other tools
+            shovelSpriteInstance.SetActive(true);
+            Debug.Log("Shovel collected!");
+        }
     }
 
     public bool HasShovel()
@@ -71,16 +91,11 @@ public class ShovelSource : MonoBehaviour
     {
         if (hasShovel)
         {
-            //hasShovel = false;
-            shovelSpriteInstance.SetActive(false); // Hide the shovel sprite after use
             Debug.Log("Shovel used!");
-
             return true;
-
         }
         return false;
     }
-
 
     private void OnMouseDown()
     {

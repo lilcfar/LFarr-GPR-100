@@ -6,7 +6,7 @@ using TMPro;
 
 public class Store : MonoBehaviour
 {
-    public GameObject storePanel;
+    public GameObject storePanel; 
 
     public GameObject[] flowerPrefabs; // Array of flower prefab variants
     public int[] flowerCosts;          // Costs for each type
@@ -20,6 +20,15 @@ public class Store : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
     }
+    
+    void start()
+    {
+        // finds it incase its null? 
+        if (storePanel == null)
+        {
+            storePanel = GameObject.Find("NEWStorePanel"); 
+        }
+    }
 
     public void BuyFlower(int flowerIndex)
     {
@@ -28,6 +37,7 @@ public class Store : MonoBehaviour
             int cost = flowerCosts[flowerIndex];
             if (PlayerInventory.Instance.PurchaseFlower(cost))
             {
+                storePanel.SetActive(false);
                 selectedFlower = Instantiate(flowerPrefabs[flowerIndex]);
                 Debug.Log("Flower selected for placement.");
             }
@@ -80,94 +90,4 @@ public class Store : MonoBehaviour
 
         Debug.Log("Invalid placement. Please place on ground.");
     }
-
-    public void OpenStore()
-    {
-        if (storePanel.activeInHierarchy == false)
-        {
-            storePanel.SetActive(true);
-        }
-        else if (storePanel.activeInHierarchy == true)
-        {
-            storePanel.SetActive(false);
-        }
-    }
-
-
-    // previous code just incase 
-    //public GameObject storePanel;
-
-    //public GameObject[] flowerPrefabs; // Array of flower prefab variants
-    //public int[] flowerCosts;          // Costs for each type
-
-    //public GameObject selectedFlower;  // The flower prefab selected for placement set to pub from priv.
-
-    //// more stuff for saving an retriving flower data for scene switches
-    //private GameManager gameManager;
-
-    //void Awake()
-    //{
-    //    gameManager = FindObjectOfType<GameManager>();
-    //}
-
-    //public void BuyFlower(int flowerIndex)
-    //{
-    //    if (flowerIndex >= 0 && flowerIndex < flowerPrefabs.Length)
-    //    {
-    //        int cost = flowerCosts[flowerIndex];
-    //        if (PlayerInventory.Instance.PurchaseFlower(cost))
-    //        {
-    //            selectedFlower = Instantiate(flowerPrefabs[flowerIndex]);
-    //            storePanel.SetActive(false);
-    //            Debug.Log("Flower selected for placement.");
-
-    //        }
-    //    }
-    //}
-
-    //void Update()
-    //{
-    //    if (selectedFlower != null)
-    //    {
-    //        MoveFlowerWithCursor();
-    //        if (Input.GetMouseButtonDown(0))
-    //        {
-    //            PlaceFlower();
-    //        }
-    //    }
-    //}
-
-    //void MoveFlowerWithCursor()
-    //{
-    //    Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    //    mousePosition.z = 0; // so flower stays in 2D 
-    //    selectedFlower.transform.position = mousePosition;
-    //}
-
-    //void PlaceFlower()
-    //{
-    //    // to only place on objects in ground layer
-    //    int groundLayer = LayerMask.GetMask("Ground");
-    //    Collider2D hit = Physics2D.OverlapPoint(selectedFlower.transform.position, groundLayer);
-
-    //    if (hit != null)
-    //    {
-    //        Debug.Log("Collider detected: " + hit.name);
-    //        if (hit.CompareTag("ground"))
-    //        {
-    //            selectedFlower = null; // Remove reference after placing
-    //            Debug.Log("Flower placed on ground.");
-    //            return;
-    //        }
-    //        else
-    //        {
-    //            Debug.Log("Detected collider does not have 'ground' tag: " + hit.tag);
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("No collider detected at flower position.");
-    //    }
-
-    //    Debug.Log("Invalid placement. Please place on ground.");
 }

@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 537709303192857121}
-  - component: {fileID: 6646214015794203499}
   - component: {fileID: 6270350625868438749}
   - component: {fileID: 4261519806795631819}
   - component: {fileID: 1820584110381197196}
@@ -36,28 +35,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6646214015794203499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7286327475148664904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a72e540a1f0aa7a458e5b710ff5f8abd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  storePanel: {fileID: 2148929192277453897, guid: e4c1382d820660a4faec576034980788, type: 3}
-  flowerPrefabs:
-  - {fileID: 7727204082808237177, guid: a3bfc63257afe204fa0744d5857450cd, type: 3}
-  - {fileID: 6897642032935144743, guid: b902b4acda6367948aa76acf92b66325, type: 3}
-  - {fileID: 1028922440186539149, guid: 88edd10db6dd23146a2e24180091dbad, type: 3}
-  - {fileID: 3891543190701401653, guid: 5e8ae9bdcc904244dacfde9ba0a217cc, type: 3}
-  - {fileID: 7524442425483328085, guid: fb1f8a90cf7e030428d31066281de3ff, type: 3}
-  - {fileID: 1798913894516351785, guid: 83e24e8105a2e03489df2357ceff392c, type: 3}
-  flowerCosts: 020000000300000004000000070000000300000009000000
-  selectedFlower: {fileID: 0}
 --- !u!114 &6270350625868438749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,4 +96,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44425d7a8155dbe42ba301dac610ee2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shovelSpritePrefab: {fileID: 9093498178051550741, guid: 60884d6def21b1248844e7832dee1906, type: 3}
+  shovelSpritePrefab: {fileID: 6175854580633382579, guid: 584ce7a6273411e4d87f99715133f9c3, type: 3}

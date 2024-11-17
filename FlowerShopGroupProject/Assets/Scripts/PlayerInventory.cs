@@ -74,7 +74,7 @@ public class PlayerInventory : MonoBehaviour
         {
             coins -= cost;
             Debug.Log("Flower purchased! Remaining coins: " + coins);
-            UpdateCoinText();
+            UpdateCoinText(); 
             return true;
 
         }

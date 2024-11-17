@@ -8,8 +8,11 @@ public class WaterSource : MonoBehaviour
     private bool hasWater = false;
 
     // for water collected user feedback
-    public GameObject waterSpritePrefab; 
+    public GameObject waterSpritePrefab;
     private GameObject waterSpriteInstance;
+
+    // to check if another tool is in use
+    public static bool isOtherToolInUse = false;
 
     private void Awake()
     {
@@ -32,12 +35,29 @@ public class WaterSource : MonoBehaviour
         waterSpriteInstance.SetActive(false);
     }
 
-    //  function called when  player clicks water sprite
+    // function called when  player clicks water sprite
     public void CollectWater()
     {
-        hasWater = true;
-        waterSpriteInstance.SetActive(true); // Show the wateringcan sprite
-        Debug.Log("Water collected!");
+        if (ShovelSource.isOtherToolInUse) // Check if shovel is being used
+        {
+            Debug.Log("Cannot collect water while shovel is in use!");
+            return;
+        }
+
+        if (hasWater)
+        {
+            hasWater = false;
+            isOtherToolInUse = false; // Allow other tools
+            waterSpriteInstance.SetActive(false);
+            Debug.Log("Water source deactivated!");
+        }
+        else
+        {
+            hasWater = true;
+            isOtherToolInUse = true; // Block other tools
+            waterSpriteInstance.SetActive(true);
+            Debug.Log("Water collected!");
+        }
     }
 
     // Function called to use water on a wilted flower
@@ -45,8 +65,6 @@ public class WaterSource : MonoBehaviour
     {
         if (hasWater)
         {
-            hasWater = false;
-            waterSpriteInstance.SetActive(false); // Hide the water sprite
             Debug.Log("Water used!");
             return true;
         }
@@ -89,7 +107,5 @@ public class WaterSource : MonoBehaviour
     {
         Debug.Log("Watersource clicked!");
         CollectWater();
-        //WaterSource.Instance.CollectWater();
     }
-
 }

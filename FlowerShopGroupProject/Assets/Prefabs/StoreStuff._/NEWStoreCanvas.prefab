@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1084715228001734831}
   - component: {fileID: 3969199160154271667}
   - component: {fileID: 6764403504622443353}
+  - component: {fileID: 8151748175798897318}
   m_Layer: 5
   m_Name: NEWStoreCanvas
   m_TagString: Untagged
@@ -104,6 +105,28 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8151748175798897318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4656101282764139012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72e540a1f0aa7a458e5b710ff5f8abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storePanel: {fileID: 0}
+  flowerPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  flowerCosts: 020000000300000004000000040000000500000005000000
+  selectedFlower: {fileID: 0}
 --- !u!1001 &2451586071033326590
 PrefabInstance:
   m_ObjectHideFlags: 0
