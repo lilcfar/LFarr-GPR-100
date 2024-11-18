@@ -113,7 +113,7 @@ MonoBehaviour:
   coinReadyPrefab: {fileID: 4872586685793344825, guid: efc640069b612bd458d44f6c93d31545, type: 3}
   coinReadyOffset: {x: 0.65, y: 0.85, z: 0}
   coinsCollected: 15
-  harvestablePrefab: {fileID: 9093498178051550741, guid: 60884d6def21b1248844e7832dee1906, type: 3}
+  harvestablePrefab: {fileID: 2520806333961232420, guid: 212e0b2bf55953649b890f68bc888b30, type: 3}
   harvestableOffset: {x: 0.65, y: 0.85, z: 0}
 --- !u!61 &4263644021865096301
 BoxCollider2D:
