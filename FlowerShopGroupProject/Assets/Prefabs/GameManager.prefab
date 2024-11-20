@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4261519806795631819}
   - component: {fileID: 1820584110381197196}
   - component: {fileID: 4306420627895417312}
+  - component: {fileID: 6418390012859205392}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -96,4 +97,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44425d7a8155dbe42ba301dac610ee2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shovelSpritePrefab: {fileID: 6175854580633382579, guid: 584ce7a6273411e4d87f99715133f9c3, type: 3}
+  shovelSpritePrefab: {fileID: 9093498178051550741, guid: 60884d6def21b1248844e7832dee1906, type: 3}
+--- !u!114 &6418390012859205392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7286327475148664904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e1714bac5a66a498c1375c46e0e13a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouquetSpritePrefab: {fileID: 488575596841519488, guid: 5e4aea862d742ff429bf8eaebb9b9e26, type: 3}

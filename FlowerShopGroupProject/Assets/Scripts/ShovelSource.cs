@@ -36,7 +36,7 @@ public class ShovelSource : MonoBehaviour
 
     public void CollectShovel()
     {
-        if (WaterSource.isOtherToolInUse) // Check if water is being used
+        if (WaterSource.isOtherToolInUse || BouquetSource.isOtherToolInUse) // Check if water is being used
         {
             Debug.Log("Cannot collect shovel while water is in use!");
             return;

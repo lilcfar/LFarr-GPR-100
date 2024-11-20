@@ -38,7 +38,7 @@ public class WaterSource : MonoBehaviour
     // function called when  player clicks water sprite
     public void CollectWater()
     {
-        if (ShovelSource.isOtherToolInUse) // Check if shovel is being used
+        if (ShovelSource.isOtherToolInUse || BouquetSource.isOtherToolInUse) // Check if shovel is being used
         {
             Debug.Log("Cannot collect water while shovel is in use!");
             return;

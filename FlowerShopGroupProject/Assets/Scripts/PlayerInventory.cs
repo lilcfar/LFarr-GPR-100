@@ -10,9 +10,9 @@ public class PlayerInventory : MonoBehaviour
     public static PlayerInventory Instance;
     private FlowerLifeCycle flowerLifeCycle;
 
-    public GameObject bouquetSlotPrefab; 
+    public GameObject bouquetSlotPrefab;
     public Transform bouquetSlotTransform;
-    private int bouquetCount = 0; 
+    private int bouquetCount = 1;
     private GameObject bouquetSlot;
     private bool hasBouquet = false; // for later dont worry 
 
@@ -74,7 +74,7 @@ public class PlayerInventory : MonoBehaviour
         {
             coins -= cost;
             Debug.Log("Flower purchased! Remaining coins: " + coins);
-            UpdateCoinText(); 
+            UpdateCoinText();
             return true;
 
         }
@@ -193,7 +193,7 @@ public class PlayerInventory : MonoBehaviour
         if (feedbackText != null)
         {
             feedbackText.text = message;
-            CancelInvoke("ClearFeedback"); 
+            CancelInvoke("ClearFeedback");
             Invoke("ClearFeedback", 2f); // Clears the feedback message after 2 seconds
         }
     }
@@ -201,5 +201,25 @@ public class PlayerInventory : MonoBehaviour
     private void ClearFeedback()
     {
         feedbackText.text = "";
+    }
+
+    // stuff for using bouquet
+    public bool HasBouquet()
+    {
+        return bouquetCount > 0;
+    }
+
+    public void UseBouquet()
+    {
+        if (bouquetCount > 0)
+        {
+            bouquetCount--;
+            UpdateBouquetSlot();
+            Debug.Log("Bouquet used! Remaining bouquets: " + bouquetCount);
+        }
+        else
+        {
+            Debug.LogWarning("No bouquets available to use!");
+        }
     }
 }
