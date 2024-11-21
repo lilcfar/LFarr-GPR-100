@@ -37,10 +37,10 @@ RectTransform:
   - {fileID: 1632877912327656187}
   m_Father: {fileID: 111433092232653463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 199.96005, y: -198.5}
+  m_SizeDelta: {x: 115, y: 115}
   m_Pivot: {x: 0.5, y: 0.50000006}
 --- !u!222 &1703176560410632548
 CanvasRenderer:
@@ -117,10 +117,10 @@ RectTransform:
   - {fileID: 2477273575947657465}
   m_Father: {fileID: 111433092232653463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 59.960052, y: -198.5}
+  m_SizeDelta: {x: 115, y: 115}
   m_Pivot: {x: 0.5, y: 0.50000006}
 --- !u!222 &3467781019535665278
 CanvasRenderer:
@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 8237584851258118712}
   - component: {fileID: 2126607985830049493}
   - component: {fileID: 6880130860923820949}
+  - component: {fileID: 6588266995856043787}
   m_Layer: 5
   m_Name: FlowerImage
   m_TagString: Untagged
@@ -235,6 +236,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6588266995856043787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365160463278908061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30e2ab8c90b7224397ec48f9b89bc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cHarvest: 7
+  cDuration: 20
 --- !u!1 &422575181539939509
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +486,7 @@ GameObject:
   - component: {fileID: 3031542731829974696}
   - component: {fileID: 1432242808232523311}
   - component: {fileID: 6000841339115542641}
+  - component: {fileID: 6496836448428674989}
   m_Layer: 5
   m_Name: FlowerImage
   m_TagString: Untagged
@@ -535,6 +551,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6496836448428674989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591093185775894725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30e2ab8c90b7224397ec48f9b89bc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cHarvest: 13
+  cDuration: 30
 --- !u!1 &803360027945110545
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +765,7 @@ GameObject:
   - component: {fileID: 2906335177726156719}
   - component: {fileID: 1126169387234215547}
   - component: {fileID: 5248498523276688523}
+  - component: {fileID: 2801346315247188139}
   m_Layer: 5
   m_Name: FlowerImage
   m_TagString: Untagged
@@ -799,6 +830,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2801346315247188139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292685240275938781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30e2ab8c90b7224397ec48f9b89bc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cHarvest: 3
+  cDuration: 10
 --- !u!1 &1327372712087585098
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,14 +1552,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6646214015794203499, guid: 76d4ee9738ba9e649ab9baac63e61db2, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Store, Assembly-CSharp
         m_MethodName: BuyFlower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1556,10 +1601,10 @@ RectTransform:
   - {fileID: 2383105697405633541}
   m_Father: {fileID: 111433092232653463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 339.96005, y: -58.499992}
+  m_SizeDelta: {x: 115, y: 115}
   m_Pivot: {x: 0.5, y: 0.50000006}
 --- !u!222 &5280550913106115354
 CanvasRenderer:
@@ -1750,7 +1795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3599336616500346849
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1876,7 +1921,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 15
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2218,14 +2263,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6646214015794203499, guid: 76d4ee9738ba9e649ab9baac63e61db2, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Store, Assembly-CSharp
         m_MethodName: BuyFlower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3013,14 +3058,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6646214015794203499, guid: 76d4ee9738ba9e649ab9baac63e61db2, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Store, Assembly-CSharp
         m_MethodName: BuyFlower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3225,9 +3270,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '15
-
-'
+  m_text: 20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3361,7 +3404,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 25
+  m_text: 30
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3687,14 +3730,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6646214015794203499, guid: 76d4ee9738ba9e649ab9baac63e61db2, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Store, Assembly-CSharp
         m_MethodName: BuyFlower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3822,14 +3865,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6646214015794203499, guid: 76d4ee9738ba9e649ab9baac63e61db2, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Store, Assembly-CSharp
         m_MethodName: BuyFlower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3899,7 +3942,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 20
+  m_text: 25
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4073,8 +4116,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 671257816175230919}
   - {fileID: 6519366258738086076}
+  - {fileID: 671257816175230919}
   - {fileID: 1975143379444615747}
   - {fileID: 4003389994241956798}
   - {fileID: 4591939153973637460}
@@ -4084,7 +4127,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.0000087969, y: -0.000030517578}
-  m_SizeDelta: {x: 0.0001, y: 0}
+  m_SizeDelta: {x: 0.0001, y: -35.6539}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &9149534037484076574
 MonoBehaviour:
@@ -4435,6 +4478,7 @@ GameObject:
   - component: {fileID: 2164339147266299873}
   - component: {fileID: 5910406564633567953}
   - component: {fileID: 7454703028588648312}
+  - component: {fileID: 8892288234200388449}
   m_Layer: 5
   m_Name: FlowerImage
   m_TagString: Untagged
@@ -4499,6 +4543,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8892288234200388449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6667039426058033564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30e2ab8c90b7224397ec48f9b89bc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cHarvest: 15
+  cDuration: 35
 --- !u!1 &6678561994537106355
 GameObject:
   m_ObjectHideFlags: 0
@@ -4979,6 +5037,7 @@ GameObject:
   - component: {fileID: 8247196011539413187}
   - component: {fileID: 3086654649053275785}
   - component: {fileID: 8038969773047239241}
+  - component: {fileID: 6848328226782487281}
   m_Layer: 5
   m_Name: FlowerImage
   m_TagString: Untagged
@@ -5043,6 +5102,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6848328226782487281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7348327706824719824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30e2ab8c90b7224397ec48f9b89bc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cHarvest: 5
+  cDuration: 15
 --- !u!1 &7751732466223094082
 GameObject:
   m_ObjectHideFlags: 0
@@ -5054,6 +5127,7 @@ GameObject:
   - component: {fileID: 235361527469966502}
   - component: {fileID: 1746694748977186514}
   - component: {fileID: 672483249286190923}
+  - component: {fileID: 4276190235586627820}
   m_Layer: 5
   m_Name: FlowerImage
   m_TagString: Untagged
@@ -5118,6 +5192,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4276190235586627820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7751732466223094082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30e2ab8c90b7224397ec48f9b89bc50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cHarvest: 10
+  cDuration: 25
 --- !u!1 &7823303767670179492
 GameObject:
   m_ObjectHideFlags: 0
@@ -5364,10 +5452,10 @@ RectTransform:
   - {fileID: 1744805108888550057}
   m_Father: {fileID: 111433092232653463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 339.96005, y: -198.5}
+  m_SizeDelta: {x: 115, y: 115}
   m_Pivot: {x: 0.5, y: 0.50000006}
 --- !u!222 &6343322750332264862
 CanvasRenderer:
@@ -5445,10 +5533,10 @@ RectTransform:
   - {fileID: 2046791612031690445}
   m_Father: {fileID: 111433092232653463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 199.96005, y: -58.499992}
+  m_SizeDelta: {x: 115, y: 115}
   m_Pivot: {x: 0.5, y: 0.50000006}
 --- !u!222 &2422138805467522929
 CanvasRenderer:
@@ -5472,7 +5560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.9481132, g: 0.63211143, b: 0.33541742, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5525,10 +5613,10 @@ RectTransform:
   - {fileID: 4761970163241837455}
   m_Father: {fileID: 111433092232653463}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 59.960052, y: -58.499992}
+  m_SizeDelta: {x: 115, y: 115}
   m_Pivot: {x: 0.5, y: 0.50000006}
 --- !u!222 &2612767266633577561
 CanvasRenderer:
@@ -5842,7 +5930,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 30
+  m_text: 35
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
