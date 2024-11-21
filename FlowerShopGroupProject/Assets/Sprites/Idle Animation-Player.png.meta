@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 35e474274e387124fae44037f801c79a
+guid: 31671d74afbdce34783342f5ad41da42
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,106 +97,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DianaSprite_0
+      name: Idle Animation-Player_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 75
+        width: 32.166668
+        height: 35
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db3da1cf6499d4c42ad4c0339f2db4cd
-      internalID: 1025747012
+      spriteID: 186a5b7ae452ef648a5cac75948cf900
+      internalID: -191262262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DianaSprite_1
+      name: Idle Animation-Player_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32.166668
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a44a53315fc50143b7859b761d3f15b
+      internalID: 626120122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle Animation-Player_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32.166668
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5147cdca3c7da8645a7b2c4dfedd5222
+      internalID: 1003796268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle Animation-Player_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32.166668
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f6c6fc5cf7a9c4e8a4e52f4850a739
+      internalID: 1831767854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle Animation-Player_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 128
-        height: 75
+        width: 32.166668
+        height: 35
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17b3b61e57b6c144e8e284c21fdaf116
-      internalID: 336047391
+      spriteID: a5bba26906447e843b8a321d3d9c50a0
+      internalID: 692407030
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DianaSprite_2
+      name: Idle Animation-Player_5
       rect:
         serializedVersion: 2
-        x: 256
+        x: 160
         y: 0
-        width: 128
-        height: 75
+        width: 32.166668
+        height: 35
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bb34743f9e1f044dbb33de19c469ffc
-      internalID: 981688089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DianaSprite_3
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 75
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df779e6b0454d884098ff1b02f460f68
-      internalID: -1422873821
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DianaSprite_4
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 75
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df242cd41615cf54181915545a86d17a
-      internalID: 1521401504
+      spriteID: e51758769b6dbf54ba2c3c2db0ee8150
+      internalID: -1217183629
       vertices: []
       indices: 
       edges: []
@@ -212,11 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DianaSprite_0: 1025747012
-      DianaSprite_1: 336047391
-      DianaSprite_2: 981688089
-      DianaSprite_3: -1422873821
-      DianaSprite_4: 1521401504
+      Idle Animation-Player_0: -191262262
+      Idle Animation-Player_1: 626120122
+      Idle Animation-Player_2: 1003796268
+      Idle Animation-Player_3: 1831767854
+      Idle Animation-Player_4: 692407030
+      Idle Animation-Player_5: -1217183629
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

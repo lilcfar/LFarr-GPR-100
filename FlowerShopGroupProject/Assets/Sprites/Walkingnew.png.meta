@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 35e474274e387124fae44037f801c79a
+guid: 4f7e2177b0f2e084d8b56b9db7efadc2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,106 +97,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DianaSprite_0
+      name: Walkingnew_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 75
+        width: 32.625
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db3da1cf6499d4c42ad4c0339f2db4cd
-      internalID: 1025747012
+      spriteID: 57506c759f128734c841e43fd6a60ec6
+      internalID: 1079892601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DianaSprite_1
+      name: Walkingnew_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32.625
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d137baaf4805304c90f1585d385fb13
+      internalID: 1825040062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walkingnew_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32.625
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7be82cdc5cbffd4e81e298a6a9a9cd1
+      internalID: 748424800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walkingnew_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32.625
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4d9fd6e7b541142afee554ce990575
+      internalID: 2071111200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walkingnew_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 128
-        height: 75
+        width: 32.625
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17b3b61e57b6c144e8e284c21fdaf116
-      internalID: 336047391
+      spriteID: 5b49f811a06577d4cb62d5a73d8ce249
+      internalID: -1274372044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DianaSprite_2
+      name: Walkingnew_5
       rect:
         serializedVersion: 2
-        x: 256
+        x: 160
         y: 0
-        width: 128
-        height: 75
+        width: 32.625
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bb34743f9e1f044dbb33de19c469ffc
-      internalID: 981688089
+      spriteID: 055cc8b4fb8aa9146af7f2305c981f73
+      internalID: -12169916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DianaSprite_3
+      name: Walkingnew_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 192
         y: 0
-        width: 128
-        height: 75
+        width: 32.625
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df779e6b0454d884098ff1b02f460f68
-      internalID: -1422873821
+      spriteID: fa5df6ddfd28e114aba7b366416c3564
+      internalID: 1750681770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DianaSprite_4
+      name: Walkingnew_7
       rect:
         serializedVersion: 2
-        x: 512
+        x: 224
         y: 0
-        width: 128
-        height: 75
+        width: 32.625
+        height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df242cd41615cf54181915545a86d17a
-      internalID: 1521401504
+      spriteID: 533baf1009b08a64ba26d93875e5b432
+      internalID: 744896537
       vertices: []
       indices: 
       edges: []
@@ -212,11 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DianaSprite_0: 1025747012
-      DianaSprite_1: 336047391
-      DianaSprite_2: 981688089
-      DianaSprite_3: -1422873821
-      DianaSprite_4: 1521401504
+      Walkingnew_0: 1079892601
+      Walkingnew_1: 1825040062
+      Walkingnew_2: 748424800
+      Walkingnew_3: 2071111200
+      Walkingnew_4: -1274372044
+      Walkingnew_5: -12169916
+      Walkingnew_6: 1750681770
+      Walkingnew_7: 744896537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

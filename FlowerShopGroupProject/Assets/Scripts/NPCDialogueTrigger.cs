@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class NPCDialogueTrigger : MonoBehaviour
 {
     public GameObject dialogueBox; // panel
-    public Text npcText;
+    public TextMeshProUGUI npcText;
     public Button[] responseButtons;
     public Image reactionSprite; // Image to display the reaction sprite
     public Sprite[] reactions; // Array of reaction sprites
