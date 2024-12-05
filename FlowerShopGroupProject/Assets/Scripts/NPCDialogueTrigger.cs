@@ -123,21 +123,21 @@ public class NPCDialogueTrigger : MonoBehaviour
         if (interactionCount == 0)
         {
             //"Well hello there.. whats your name?"
-            responseButtons[0].GetComponentInChildren<Text>().text = "[Lie and Say your name is] Morty, nice to meet you!";
-            responseButtons[1].GetComponentInChildren<Text>().text = "Hello! Well... at my last job they called me the executioner!";
+            responseButtons[0].GetComponentInChildren<TMP_Text>().text = "[Lie and Say your name is] Morty, nice to meet you!";
+            responseButtons[1].GetComponentInChildren<TMP_Text>().text = "Hello! Well... at my last job they called me the executioner!";
         }
         else if (interactionCount == 1)
         {
             // "Oh you again! So you're new here I hear. Where were you befor? What brought you here?"
-            responseButtons[0].GetComponentInChildren<Text>().text = "Oh you know, just wanted to get away from the rat race of the city and start fresh";
-            responseButtons[1].GetComponentInChildren<Text>().text = "[Tell the truth, that's the right thing to do... right?] I escaped my job as a soul collector in the underworld because I like flowers and girls";
+            responseButtons[0].GetComponentInChildren<TMP_Text>().text = "Oh you know, just wanted to get away from the rat race of the city and start fresh";
+            responseButtons[1].GetComponentInChildren<TMP_Text>().text = "[Tell the truth, that's the right thing to do... right?] I escaped my job as a soul collector in the underworld because I like flowers and girls";
 
         }
         else if (interactionCount > 1) 
         {
             // "I really enjoy your devilish appearence today... How do you like my eyelashes?"
-            responseButtons[0].GetComponentInChildren<Text>().text = "Thank you. I thought I'd get dressed up since you're here so often and your eylashes are so lovely";
-            responseButtons[1].GetComponentInChildren<Text>().text = "Well in the underworld your eyelashes would've been burnt off by now so not very practical";
+            responseButtons[0].GetComponentInChildren<TMP_Text>().text = "Thank you. I thought I'd get dressed up since you're here so often and your eylashes are so lovely";
+            responseButtons[1].GetComponentInChildren<TMP_Text>().text = "Well in the underworld your eyelashes would've been burnt off by now so not very practical";
 
         }
 
