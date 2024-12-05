@@ -13,6 +13,9 @@ public class CameraMoverScript : MonoBehaviour
     public Button MoveSceneLeftButton; // Button to move forward
     public Button MoveSceneRightButton;
 
+    public GameObject dialogueCanvas; 
+    private bool hasDisplayedDialogue = false;
+
     private Vector3 startPosition;
     private Vector3 targetPosition;
     private bool isMoving = false;
@@ -28,6 +31,11 @@ public class CameraMoverScript : MonoBehaviour
 
         MoveSceneLeftButton.onClick.AddListener(MoveCameraForward);
         MoveSceneRightButton.onClick.AddListener(MoveCameraBack);
+
+        if (dialogueCanvas != null)
+        {
+            dialogueCanvas.SetActive(false); // Ensure the dialogue is hidden initially
+        }
     }
 
     private void Update()
@@ -49,6 +57,14 @@ public class CameraMoverScript : MonoBehaviour
                 if (!isAtStart)
                 {
                     playerController.EnableMovement(true);
+
+                    // Show dialogue the first time the camera moves
+                    if (!hasDisplayedDialogue)
+                    {
+                        hasDisplayedDialogue = true;
+                        StartCoroutine(ShowDialogue());
+                    }
+
                 }
                 else
                 {
@@ -84,6 +100,16 @@ public class CameraMoverScript : MonoBehaviour
     {
         MoveSceneLeftButton.gameObject.SetActive(isAtStart); // Show forward button if at start
         MoveSceneRightButton.gameObject.SetActive(!isAtStart); // Show back button if at target
+    }
+
+    private IEnumerator ShowDialogue()
+    {
+        if (dialogueCanvas != null)
+        {
+            dialogueCanvas.SetActive(true); 
+            yield return new WaitForSeconds(15f); 
+            dialogueCanvas.SetActive(false); 
+        }
     }
 }
 
