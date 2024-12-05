@@ -15,8 +15,8 @@ public class Tooltip : MonoBehaviour
 
     public void SetText(int cHarvest, int cDuration)
     {
-        coinHarvest.text = "Harvest: " + cHarvest.ToString();
-        coinDuration.text = "Harvest Time: " + cDuration.ToString();
+        coinHarvest.text = "Coin Yeild: " + cHarvest.ToString();
+        coinDuration.text = "Yield Interval: " + cDuration.ToString();
        
 
     }

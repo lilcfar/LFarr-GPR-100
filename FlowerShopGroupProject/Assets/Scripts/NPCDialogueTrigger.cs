@@ -193,8 +193,8 @@ public class NPCDialogueTrigger : MonoBehaviour
             button.gameObject.SetActive(true);
         }
 
-        responseButtons[0].GetComponentInChildren<Text>().text = "Ask on a date";
-        responseButtons[1].GetComponentInChildren<Text>().text = "Not now";
+        responseButtons[0].GetComponentInChildren<TMP_Text>().text = "Ask on a date";
+        responseButtons[1].GetComponentInChildren<TMP_Text>().text = "Not now";
 
         responseButtons[0].onClick.RemoveAllListeners();
         responseButtons[1].onClick.RemoveAllListeners();
