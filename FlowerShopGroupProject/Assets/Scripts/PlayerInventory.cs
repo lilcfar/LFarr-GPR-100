@@ -167,8 +167,8 @@ public class PlayerInventory : MonoBehaviour
                 availableFlowers.Add(flower.Key);
             }
         }
-
-        if (availableFlowers.Count >= 4)
+        // adjusted amount of flowers needed 
+        if (availableFlowers.Count >= 6)
         {
             for (int i = 0; i < 4; i++)
             {
@@ -186,6 +186,9 @@ public class PlayerInventory : MonoBehaviour
         {
             DisplayFeedback("Not enough different flowers to create a bouquet.");
         }
+
+        // Notify BouquetSource to update the toolbar
+        BouquetSource.Instance?.UpdateBouquetCountText();
     }
 
     private void DisplayFeedback(string message)
@@ -221,5 +224,13 @@ public class PlayerInventory : MonoBehaviour
         {
             Debug.LogWarning("No bouquets available to use!");
         }
+        // Notify BouquetSource to update the toolbar
+        BouquetSource.Instance?.UpdateBouquetCountText();
+    }
+
+    // for toolbar 
+    public int BouquetCount
+    {
+        get { return bouquetCount; }
     }
 }
