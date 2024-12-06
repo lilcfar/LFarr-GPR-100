@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
-    public Text xpText;
+    public TMP_Text xpText;
     public static int playerXP = 0;
 
     public void Update()
@@ -17,7 +18,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (xpText != null)
         {
-            xpText.text = "XP: " + playerXP;
+            xpText.text = "XP:" + playerXP;
         }
     }
 }

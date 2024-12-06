@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlowerLifeCycle : MonoBehaviour
 {
@@ -48,6 +49,12 @@ public class FlowerLifeCycle : MonoBehaviour
     public Vector3 harvestableOffset = new Vector3(0.65f, .85f, 0f);
     private GameObject harvestableInstance;
 
+    //progressBar feedback
+    public GameObject progressBarPrefab;
+    public Vector3 progressBarOffset = new Vector3(-0.5f, -.5f, 0f);
+    private GameObject progressBarInstance;
+    private float progressBarTimer = 0f;
+
     private SpriteRenderer spriteRenderer;
 
     void Start()
@@ -76,6 +83,21 @@ public class FlowerLifeCycle : MonoBehaviour
             if (hit.collider != null && hit.collider.gameObject == this.gameObject)
             {
                 HarvestFlower();
+            }
+        }
+
+        if (progressBarInstance != null)
+        {
+            progressBarTimer += Time.deltaTime;
+
+            // Get the Image component
+            Image progressBarImage = progressBarInstance.GetComponentInChildren<Image>();
+            if (progressBarImage != null)
+            {
+                // Set fill amount based on the elapsed time
+                progressBarImage.fillAmount = progressBarTimer / timeToHarvest;
+
+
             }
         }
     }
@@ -108,6 +130,13 @@ public class FlowerLifeCycle : MonoBehaviour
                 currentState = FlowerState.FullGrown;
                 spriteRenderer.sprite = fullGrownSprite;
                 isFullGrown = true;
+
+                if (progressBarInstance == null && progressBarPrefab != null)
+                {
+                    Vector3 positionLeftFlower = transform.position + progressBarOffset;
+                    progressBarInstance = Instantiate(progressBarPrefab, positionLeftFlower, Quaternion.identity);
+
+                }
                 // full grown is true so call to start producing currency and wilting cycle
                 StartCoroutine(ProduceCoins());
                 StartCoroutine(WiltFlower());
@@ -230,6 +259,7 @@ public class FlowerLifeCycle : MonoBehaviour
             Destroy(coinReadyInstance);
             Destroy(needWaterInstance);
             Destroy(harvestableInstance);
+            Destroy(progressBarInstance);
             Destroy(this.gameObject);
         }
     }

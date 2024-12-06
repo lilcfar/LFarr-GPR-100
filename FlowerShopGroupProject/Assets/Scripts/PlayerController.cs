@@ -25,6 +25,17 @@ public class PlayerController : MonoBehaviour
         float moveY = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
 
         transform.position += new Vector3(moveX, moveY, 0f);
+
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (moveX > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (moveX < 0)
+        {
+            spriteRenderer.flipX=true;
+        }
     }
 
     private void RestrictPlayerToBounds()

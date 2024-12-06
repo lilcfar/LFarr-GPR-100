@@ -115,6 +115,8 @@ MonoBehaviour:
   coinsCollected: 3
   harvestablePrefab: {fileID: 2520806333961232420, guid: 212e0b2bf55953649b890f68bc888b30, type: 3}
   harvestableOffset: {x: 0.65, y: 0.85, z: 0}
+  progressBarPrefab: {fileID: 2456846008158861736, guid: a27e8059ac717c44b82ede654afab5e3, type: 3}
+  progressBarOffset: {x: -0.5, y: -0.5, z: 0}
 --- !u!61 &7654955636282010921
 BoxCollider2D:
   m_ObjectHideFlags: 0
