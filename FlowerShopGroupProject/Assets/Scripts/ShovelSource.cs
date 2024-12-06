@@ -36,27 +36,51 @@ public class ShovelSource : MonoBehaviour
 
     public void CollectShovel()
     {
-        if (WaterSource.isOtherToolInUse || BouquetSource.isOtherToolInUse) // Check if water is being used
+        if (!hasShovel)
         {
-            Debug.Log("Cannot collect shovel while water is in use!");
-            return;
-        }
+            // Deactivate other tools
+            WaterSource.Instance?.DeactivateWaterTool();
+            BouquetSource.Instance?.DeactivateBouquetTool();
 
-        if (hasShovel)
-        {
-            hasShovel = false;
-            isOtherToolInUse = false; // Allow other tools
-            shovelSpriteInstance.SetActive(false);
-            Debug.Log("Shovel returned!");
-        }
-        else
-        {
             hasShovel = true;
-            isOtherToolInUse = true; // Block other tools
+            isOtherToolInUse = true;
             shovelSpriteInstance.SetActive(true);
             Debug.Log("Shovel collected!");
         }
+        else
+        {
+            DeactivateShovelTool(); 
+        }
+        //if (WaterSource.isOtherToolInUse || BouquetSource.isOtherToolInUse) // Check if water is being used
+        //{
+        //    Debug.Log("Cannot collect shovel while water is in use!");
+        //    return;
+        //}
+
+        //if (hasShovel)
+        //{
+        //    hasShovel = false;
+        //    isOtherToolInUse = false; // Allow other tools
+        //    shovelSpriteInstance.SetActive(false);
+        //    Debug.Log("Shovel returned!");
+        //}
+        //else
+        //{
+        //    hasShovel = true;
+        //    isOtherToolInUse = true; // Block other tools
+        //    shovelSpriteInstance.SetActive(true);
+        //    Debug.Log("Shovel collected!");
+        //}
     }
+    public void DeactivateShovelTool()
+    {
+        hasShovel = false;
+        isOtherToolInUse = false;
+        shovelSpriteInstance.SetActive(false);
+        Debug.Log("Shovel returned!");
+    }
+
+
 
     public bool HasShovel()
     {

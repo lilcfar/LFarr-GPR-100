@@ -84,8 +84,10 @@ public class NPCDialogueTrigger : MonoBehaviour
             else if (playerInventory != null && PlayerStats.playerXP >= 10 && playerInventory.HasBouquet())
             {
                 npcText.text = "You can give me a bouquet using the bouquet tool.";
-                //responseButtons.gameObject.SetActive(false); // Hide buttons during this message
-                
+                foreach (var button in responseButtons)
+                {
+                    button.gameObject.SetActive(false);
+                }
             }
             else
             {

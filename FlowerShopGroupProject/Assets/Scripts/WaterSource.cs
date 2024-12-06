@@ -38,27 +38,50 @@ public class WaterSource : MonoBehaviour
     // function called when  player clicks water sprite
     public void CollectWater()
     {
-        if (ShovelSource.isOtherToolInUse || BouquetSource.isOtherToolInUse) // Check if shovel is being used
+        if (!hasWater)
         {
-            Debug.Log("Cannot collect water while shovel is in use!");
-            return;
-        }
+            ShovelSource.Instance?.DeactivateShovelTool();
+            BouquetSource.Instance?.DeactivateBouquetTool();
 
-        if (hasWater)
-        {
-            hasWater = false;
-            isOtherToolInUse = false; // Allow other tools
-            waterSpriteInstance.SetActive(false);
-            Debug.Log("Water source deactivated!");
-        }
-        else
-        {
             hasWater = true;
-            isOtherToolInUse = true; // Block other tools
+            isOtherToolInUse = true;
             waterSpriteInstance.SetActive(true);
             Debug.Log("Water collected!");
         }
+        else
+        {
+            DeactivateWaterTool(); 
+        }
+        //if (ShovelSource.isOtherToolInUse || BouquetSource.isOtherToolInUse) // Check if shovel is being used
+        //{
+        //    Debug.Log("Cannot collect water while shovel is in use!");
+        //    return;
+        //}
+
+        //if (hasWater)
+        //{
+        //    hasWater = false;
+        //    isOtherToolInUse = false; // Allow other tools
+        //    waterSpriteInstance.SetActive(false);
+        //    Debug.Log("Water source deactivated!");
+        //}
+        //else
+        //{
+        //    hasWater = true;
+        //    isOtherToolInUse = true; // Block other tools
+        //    waterSpriteInstance.SetActive(true);
+        //    Debug.Log("Water collected!");
+        //}
     }
+    public void DeactivateWaterTool()
+    {
+        hasWater = false;
+        isOtherToolInUse = false;
+        waterSpriteInstance.SetActive(false);
+        Debug.Log("Water source deactivated!");
+    }
+
+
 
     // Function called to use water on a wilted flower
     public bool UseWater()

@@ -57,30 +57,49 @@ public class BouquetSource : MonoBehaviour
 
     public void ActivateBouquetTool()
     {
-        if (ShovelSource.isOtherToolInUse || WaterSource.isOtherToolInUse)
-        {
-            Debug.Log("Another tool is currently in use!");
-            return;
-        }
-        // Check XP
         if (PlayerStats.playerXP < 30)
         {
             ShowPopup("You need at least 30 XP to use the bouquet tool!");
             return;
         }
-        if (hasBouquet) 
+        if (!hasBouquet)
         {
-            DeactivateBouquetTool();
-        }
-        else
-        {
+            // Deactivate other tools
+            ShovelSource.Instance?.DeactivateShovelTool();
+            WaterSource.Instance?.DeactivateWaterTool();
+
             hasBouquet = true;
             isOtherToolInUse = true;
             bouquetSpriteInstance.SetActive(true);
             Debug.Log("Bouquet tool activated!");
         }
+        else
+        {
+            DeactivateBouquetTool(); // Put away the tool
+        }
+        //if (ShovelSource.isOtherToolInUse || WaterSource.isOtherToolInUse)
+        //{
+        //    Debug.Log("Another tool is currently in use!");
+        //    return;
+        //}
+        //// Check XP
+        //if (PlayerStats.playerXP < 30)
+        //{
+        //    ShowPopup("You need at least 30 XP to use the bouquet tool!");
+        //    return;
+        //}
+        //if (hasBouquet) 
+        //{
+        //    DeactivateBouquetTool();
+        //}
+        //else
+        //{
+        //    hasBouquet = true;
+        //    isOtherToolInUse = true;
+        //    bouquetSpriteInstance.SetActive(true);
+        //    Debug.Log("Bouquet tool activated!");
+        //}
     }
-
     public void DeactivateBouquetTool()
     {
         hasBouquet = false;
@@ -88,6 +107,7 @@ public class BouquetSource : MonoBehaviour
         bouquetSpriteInstance.SetActive(false);
         Debug.Log("Bouquet tool deactivated!");
     }
+
 
     private void Update()
     {
