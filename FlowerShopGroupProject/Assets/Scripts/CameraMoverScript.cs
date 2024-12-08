@@ -107,7 +107,7 @@ public class CameraMoverScript : MonoBehaviour
         if (dialogueCanvas != null)
         {
             dialogueCanvas.SetActive(true); 
-            yield return new WaitForSeconds(3f); 
+            yield return new WaitForSeconds(8f); 
             dialogueCanvas.SetActive(false); 
         }
     }

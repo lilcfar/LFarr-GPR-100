@@ -57,6 +57,11 @@ public class BouquetSource : MonoBehaviour
 
     public void ActivateBouquetTool()
     {
+        if (!PlayerInventory.Instance.HasBouquet())
+        {
+            ShowPopup("You don't have any bouquets to use!");
+            return;
+        }
         if (PlayerStats.playerXP < 30)
         {
             ShowPopup("You need at least 30 XP to use the bouquet tool!");
