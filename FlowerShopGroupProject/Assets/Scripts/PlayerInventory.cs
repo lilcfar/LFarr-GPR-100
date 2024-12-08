@@ -12,7 +12,7 @@ public class PlayerInventory : MonoBehaviour
 
     public GameObject bouquetSlotPrefab;
     public Transform bouquetSlotTransform;
-    private int bouquetCount = 1;
+    private int bouquetCount = 0;
     private GameObject bouquetSlot;
     private bool hasBouquet = false; // for later dont worry 
 
