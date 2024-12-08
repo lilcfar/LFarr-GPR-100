@@ -5251,6 +5251,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1194002394}
     m_Modifications:
+    - target: {fileID: 352874149193241429, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}
+      propertyPath: cHarvest
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 927072722967500293, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -60.19995
@@ -5278,6 +5282,10 @@ PrefabInstance:
     - target: {fileID: 1552384489107861568, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1827859835800920850, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}
+      propertyPath: cHarvest
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2142606069245074090, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5471,6 +5479,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6440720879564028063, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}
+      propertyPath: cHarvest
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7546255299822866997, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5511,6 +5523,10 @@ PrefabInstance:
       propertyPath: flowerCosts.Array.data[5]
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 8659488455863723091, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}
+      propertyPath: cHarvest
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8682018247790095170, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -5534,6 +5550,14 @@ PrefabInstance:
     - target: {fileID: 8682018247790095170, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8749352129293010165, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}
+      propertyPath: cHarvest
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9011683845289412879, guid: 6b7ba7b03e349bb45ad79fb9d33042de, type: 3}
+      propertyPath: cHarvest
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
