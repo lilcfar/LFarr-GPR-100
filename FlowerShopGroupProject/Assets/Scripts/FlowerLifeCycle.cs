@@ -51,9 +51,9 @@ public class FlowerLifeCycle : MonoBehaviour
 
     //progressBar feedback
     public GameObject progressBarPrefab;
-    public Vector3 progressBarOffset = new Vector3(-0.5f, -.5f, 0f);
-    private GameObject progressBarInstance;
     private float progressBarTimer = 0f;
+    public Image progressBarImage;
+    
 
     private SpriteRenderer spriteRenderer;
 
@@ -86,20 +86,13 @@ public class FlowerLifeCycle : MonoBehaviour
             }
         }
 
-        if (progressBarInstance != null)
+        if (currentState == FlowerState.FullGrown || currentState == FlowerState.Wilted)
         {
+            progressBarPrefab.SetActive(true);
             progressBarTimer += Time.deltaTime;
-
-            // Get the Image component
-            Image progressBarImage = progressBarInstance.GetComponentInChildren<Image>();
-            if (progressBarImage != null)
-            {
-                // Set fill amount based on the elapsed time
-                progressBarImage.fillAmount = progressBarTimer / timeToHarvest;
-
-
-            }
+            progressBarImage.fillAmount = progressBarTimer / timeToHarvest;
         }
+
     }
 
     private void OnMouseDown()
@@ -131,12 +124,6 @@ public class FlowerLifeCycle : MonoBehaviour
                 spriteRenderer.sprite = fullGrownSprite;
                 isFullGrown = true;
 
-                if (progressBarInstance == null && progressBarPrefab != null)
-                {
-                    Vector3 positionLeftFlower = transform.position + progressBarOffset;
-                    progressBarInstance = Instantiate(progressBarPrefab, positionLeftFlower, Quaternion.identity);
-
-                }
                 // full grown is true so call to start producing currency and wilting cycle
                 StartCoroutine(ProduceCoins());
                 StartCoroutine(WiltFlower());
@@ -259,7 +246,6 @@ public class FlowerLifeCycle : MonoBehaviour
             Destroy(coinReadyInstance);
             Destroy(needWaterInstance);
             Destroy(harvestableInstance);
-            Destroy(progressBarInstance);
             Destroy(this.gameObject);
         }
     }
